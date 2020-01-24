@@ -20,14 +20,12 @@ def shift_by(str, shift):
     return shifted
 
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
-features = ['letter_count', 'word_count', 'longest_word_len', 'shortest_word_len', 'avg_word_len']
 targets = [c for c in alphabet]
 targets.extend([c + d for c in alphabet for d in alphabet])
 targets.extend([c+'_1' for c in alphabet])
 
 df = pd.read_csv('data.csv')
 
-X = df[features].fillna(0)
 y = df[targets].fillna(0)
 
 # Select one row from the dataframe (0 = data from https://en.wikipedia.org/wiki/Letter_frequency)
