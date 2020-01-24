@@ -35,7 +35,7 @@ y = y.iloc[0]
 
 input_file = open(sys.argv[1], 'r')
 input = input_file.read()
-input = shift_by(input, 7)
+
 print("Ciphertext: " + input)
 
 dict = generate_dict(input)
