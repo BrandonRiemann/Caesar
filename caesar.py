@@ -33,7 +33,8 @@ y = df[targets].fillna(0)
 # Select one row from the dataframe (0 = data from https://en.wikipedia.org/wiki/Letter_frequency)
 y = y.iloc[0]
 
-input = "It is late and I need to sleep."
+input_file = open(sys.argv[1], 'r')
+input = input_file.read()
 input = shift_by(input, 7)
 print("Ciphertext: " + input)
 

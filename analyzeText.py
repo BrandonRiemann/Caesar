@@ -24,12 +24,7 @@ def generate_dict(str, file = False):
     # first_letter_counts - key: a_1, b_1, ..., z_1; value: frequency of first letter of word
     first_letter_counts = {}
 
-    if file:
-        input_file = open(str, 'r')
-        input = input_file.read().lower()
-        input_file.close()
-    else:
-        input = str.lower()
+    input = str.lower()
 
     counter = Counter(input)
 
